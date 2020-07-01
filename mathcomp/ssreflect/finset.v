@@ -1587,7 +1587,7 @@ Lemma imset_comp (f : T' -> U) (g : T -> T') (H : {pred T}) :
 Proof.
 apply/setP/subset_eqP/andP.
 split; apply/subsetP=> _ /imsetP[x0 Hx0 ->]; apply/imsetP.
-  by exists (g x0); first apply: mem_imset.
+  by exists (g x0); first apply: imset_f.
 by move/imsetP: Hx0 => [x1 Hx1 ->]; exists x1.
 Qed.
 
